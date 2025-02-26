@@ -1,10 +1,15 @@
 ﻿@page "/"
 @rendermode InteractiveServer
+@inject NavigationManager NavigationManager
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+Please type a login and a password (for example "a" "a") and submit.<br />
+Once submitted, save it to your browser password manager.<br />
+Come back here after that.
 
-Welcome to your new app.
-
-<MudTextField T="string" Label="Test" Variant="Variant.Filled"></MudTextField>
+<form method="get" action="/Page2">
+	<MudTextField T="string" Label="Login" Variant="Variant.Filled"></MudTextField>
+	<MudTextField T="string" InputType="InputType.Password" Label="Password" Variant="Variant.Filled"></MudTextField>
+	<MudButton ButtonType="ButtonType.Submit">Submit</MudButton>
+</form>
